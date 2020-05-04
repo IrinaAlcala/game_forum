@@ -9,13 +9,13 @@ from .models import Game
 def home(request):
   return render(request, 'home.html')
 
-class GameDetail(ListView):
+class GameList(ListView):
   model = Game
 
   def get_queryset(self):
     return Game.objects.all()
 
-class GameDetail(DeleteView):
+class GameDetail(DetailView):
   model = Game
 
 class GameCreate(CreateView):

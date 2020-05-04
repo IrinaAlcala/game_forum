@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Games List</h1>
+
+{% for game in game_list %}
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">
+        <a href="{% url 'games_detail' game.id %}">
+          {{ game.name }}
+        </a>
+      </span>
+      <p>Genre: {{ game.genre }}</p>
+      <p>Description: {{ game.description }}</p>
+      <p>Publisher: {{ game.publisher }}</p>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
