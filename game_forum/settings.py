@@ -79,7 +79,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'game_forum',
-        # 'USER': 'postgres',
+        'USER': 'postgres',
     }
 }
 
