@@ -3,6 +3,15 @@ from django.urls import reverse
 from datetime import date
 from django.contrib.auth.models import User
 
+RATINGS = (
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4,4),
+    (5,5)
+)
+
+
 
 # Create your models here.
 class Game(models.Model):
@@ -23,7 +32,7 @@ class Review(models.Model):
     date = models.DateField('Review Date')
     name = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField(max_length=200)
-    rating = models.IntegerField()
+    rating = models.IntegerField(choices=RATINGS, default=RATINGS[0][4])
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
 
     def __str__(self):
