@@ -19,17 +19,15 @@ class Game(models.Model):
         return reverse('games_detail', kwargs={ 'pk': self.id })
 
 
-# class Reviews(models.Model):
-#     date = models.DateField('Posting Date')
-#     author = models.ForeignKey(User, on_delete=models.CASCADE)
-#     content = models.CharField(max_length=200)
-#     rating = models.IntegerField(max_length=5)
+class Review(models.Model):
+    date = models.DateField('Review Date')
+    name = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.TextField(max_length=200)
+    rating = models.IntegerField()
+    game = models.ForeignKey(Game, on_delete=models.CASCADE)
 
+    def __str__(self):
+         return f"{self.get_review_display()} on {self.date}"
 
-#     game = models.ForeignKey(Game, on_delete=models.CASCADE)
-
-#     def __str__(self):
-#         return f"{self.get_review_display()} on {self.date}"
-
-#     class Meta:
-#         ordering = ['-date']
+    class Meta:
+        ordering = ['-date']

@@ -9,7 +9,9 @@
                 {{ form.as_p }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Login</button>
+                <input type="submit" class="btn" value="login">
+  <input type="hidden" name="next" value="{{ next }}">
+                <!-- <button class="btn btn-outline-info" type="submit">Login</button> -->
             </div>
         </form>
         <div class="border-top pt-3">
