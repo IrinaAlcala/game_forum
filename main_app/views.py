@@ -5,7 +5,7 @@ from .models import Game
 from .forms import ReviewForm
 
 
-
+#test
 # Define the home view
 def home(request):
   return render(request, 'home.html')
