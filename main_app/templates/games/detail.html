@@ -32,7 +32,7 @@
           {% for review in game.review_set.all %}
             <tr>
               <td>{{review.date}}</td>
-              <td>{{ review.get_review_display }}</td>
+              <td>{{ review.content }}</td>
             </tr>
           {% endfor %}
         </tbody>
