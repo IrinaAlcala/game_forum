@@ -76,6 +76,7 @@ def add_review(request, game_id):
   form = ReviewForm(request.POST)
 
   if form.is_valid():
+    # here are the changes with Fred!
     new_review = form.save(commit=False)
     new_review.game_id = game_id
     new_review.name_id = request.user.id
@@ -88,5 +89,3 @@ class GameList(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
       return Game.objects.filter(user=self.request.user)
-
-
