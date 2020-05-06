@@ -74,12 +74,15 @@ def games_detail(request, game_id):
 @login_required
 def add_review(request, game_id):
   form = ReviewForm(request.POST)
+
   if form.is_valid():
     new_review = form.save(commit=False)
-    new_review.game_id=game_id
+    new_review.game_id = game_id
+    new_review.name_id = request.user.id
     new_review.save()
 
   return redirect('detail', game_id=game_id)
+
 class GameList(LoginRequiredMixin, ListView):
     model = Game
 
