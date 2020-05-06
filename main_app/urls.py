@@ -11,4 +11,5 @@ urlpatterns = [
   path('games/<int:game_id>/', views.add_review, name='add_review'),
   path('accounts/', include('django.contrib.auth.urls')),
   path('accounts/signup', views.signup, name='signup'),
+  path('games/<int:game_id>/add_review/', views.add_review, name='add_review'),
 ]
