@@ -5,6 +5,7 @@ from .models import Game
 from .forms import ReviewForm
 
 
+#test
 # Define the home view
 def home(request):
   return render(request, 'home.html')
@@ -34,7 +35,10 @@ def add_review(request,pk):
     new_review.save()
 
   return redirect('games_detail', pk=pk)
+<<<<<<< HEAD
 
+=======
+>>>>>>> b1cf6672ae894289b854110fb1b376efdc7c81db
 
 class GameCreate(CreateView):
   model = Game
