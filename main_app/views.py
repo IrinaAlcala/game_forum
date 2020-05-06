@@ -31,8 +31,8 @@ def signup(request):
 
 class GameCreate(LoginRequiredMixin, CreateView):
   model = Game
-  fields = '__all__'
-  
+  fields = ['name', 'genre', 'description', 'publisher']
+  success_url = '/games/'
   
   def form_valid(self, form):
     # Assign the logged in user
@@ -65,11 +65,10 @@ def games_index(request):
 @login_required
 def games_detail(request, game_id):
   game = Game.objects.get(id=game_id)
-
   review_form = ReviewForm()
   return render(request, 'games/detail.html', {
-    'game' : game,
-    'review_form' : review_form,
+    'game': game,
+    'review_form': review_form,
   })
 
 @login_required
