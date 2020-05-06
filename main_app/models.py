@@ -26,8 +26,8 @@ class Review(models.Model):
     rating = models.IntegerField()
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
 
-    def __str__(self):
-         return f"{self.get_review_display()} on {self.date}"
+    # def __str__(self):
+    #      return f"{self.get_review_display()} on {self.date}"
 
     class Meta:
         ordering = ['-date']
