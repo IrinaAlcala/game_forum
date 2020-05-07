@@ -33,7 +33,7 @@ This helps people who visit the site know which games to buy and which games to 
 ---
 
 - [Trello Board](https://trello.com/b/E6AG1fNT/gameforum)
-- [Visit our Website here]()
+- [Visit our Website here](https://p3gameforum.herokuapp.com/)
 
 ## Next Steps
 
