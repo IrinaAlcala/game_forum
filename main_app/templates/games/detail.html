@@ -39,25 +39,17 @@
     
       <table class="striped">
         <thead>
-<<<<<<< HEAD
           <tr><th>Date</th>
             <th>Review</th>
             <th>Rating</th>
           </tr>
-=======
-          <tr><th>Date</th><th>Review</th><th>Rating</th></tr>
->>>>>>> 52847eb39f42ecebb46a09205ae61c0194985ba6
         </thead>
         <tbody>
           {% for review in game.review_set.all %}
             <tr>
               <td>{{review.date}}</td>
               <td>{{ review.content }}</td>
-<<<<<<< HEAD
               <td>{{review.rating}}</td>
-=======
-              <td>{{ review.rating }}</td>
->>>>>>> master
             </tr>
           </div>
   </div>
@@ -81,3 +73,4 @@
 </script>
 
 {% endblock %}
+<!-- test -->
