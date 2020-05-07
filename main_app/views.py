@@ -43,7 +43,7 @@ class GameCreate(LoginRequiredMixin, CreateView):
 
 class GameUpdate(LoginRequiredMixin, UpdateView):
   model = Game
-  fields = '__all__'
+  fields = ['name', 'genre', 'description', 'publisher']
   success_url = '/games/'
 
 class GameDelete(LoginRequiredMixin, DeleteView):
@@ -54,14 +54,11 @@ class GameDelete(LoginRequiredMixin, DeleteView):
 def home(request):
   return render(request, 'home.html')
 
-
-
 @login_required
 def games_index(request):
   games = Game.objects.filter(user=request.user)
   return render(request, 'games/index.html', { 'games': games })
 
-  
 @login_required
 def games_detail(request, game_id):
   game = Game.objects.get(id=game_id)
