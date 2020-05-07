@@ -15,6 +15,7 @@ This helps people who visit the site know which games to buy and which games to 
 ![home page](image.jpg)
 ![login](image.jpg)
 ![add a game](image.jpg)
+![game list](https://i.imgur.com/lrDKVva.png)
 ![edit](image.jpg)
 ![comments/reviews](image.jpg)
 
