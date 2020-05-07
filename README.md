@@ -12,11 +12,11 @@ This helps people who visit the site know which games to buy and which games to 
 
 ---
 
-![home page](image.jpg)
-![login](image.jpg)
-![add a game](image.jpg)
-![edit](image.jpg)
-![comments/reviews](image.jpg)
+![login](https://i.imgur.com/xkqoORO.png)
+![add a game](https://i.imgur.com/BbsTOzP.png)
+![game list](https://i.imgur.com/lrDKVva.png)
+![edit](https://i.imgur.com/WQVThqO.png)
+![comments/reviews](https://i.imgur.com/IPhrefv.png)
 
 ## Technologies Used
 
@@ -33,7 +33,7 @@ This helps people who visit the site know which games to buy and which games to 
 ---
 
 - [Trello Board](https://trello.com/b/E6AG1fNT/gameforum)
-- [Visit our Website here]()
+- [Visit our Website here](https://p3gameforum.herokuapp.com/)
 
 ## Next Steps
 
