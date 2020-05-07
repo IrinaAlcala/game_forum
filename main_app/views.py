@@ -70,7 +70,7 @@ def games_detail(request, game_id):
 
 @login_required
 def add_review(request, game_id):
-  form = ReviewForm(request.POST)
+  form = ReviewForm(request.POST, request.FILES)
 
   if form.is_valid():
     # here are the changes with Fred!
