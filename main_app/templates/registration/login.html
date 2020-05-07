@@ -1,12 +1,36 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
+<style>
+  body {
+    background-image: url('https://imgur.com/kFAWpCt.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  </style>
+<h1 align="center">Log In</h1><br>
 
-<h1>Log In</h1>
-
-<!-- Add the login form -->
+<div class="row">
+  <div class="col s8 m10">
+        <div class="grey lighten-2">
+          
+         <div style="padding: 20px; align=center">  
+          
+      <br>
+        <div class="card-content margin: 20px"; align="center">
 <form method="post" action="{% url 'login' %}">
   {% csrf_token %} {{ form.as_p }}
-  <input type="submit" class="btn" value="login" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</form>
+  
+  <br>
+    <input type="submit" class="btn" value="login" style="margin-left: 0%" />
+  <input type="hidden" name="next" value="{{ next }}" /> <br>
+</div>
+</div>
+</div>
+</form> 
+</div>
+</div>
+</div>
+
 
 {% endblock %}

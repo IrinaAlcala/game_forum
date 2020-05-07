@@ -1,23 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<h1>Game Details</h1>
-<div class="row">
-  <div class="col s6">
-<div class="card">
+<style>
+  body {
+    background-image: url('https://imgur.com/nGCaHGN.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  </style>
+<h1 align="center">Game Details</h1>
+  <div class="col s6 m10">
+    <div class="card grey darken-1 card-content white-text">
   <div class="card-content">
-    <span class="card-title">{{ game.name }}</span>
+    <span class="card-title orange-text">{{ game.name }}</span>
             <p>Genre: {{ game.genre }}</p>
             <p>Description: {{ game.description }}</p>
             <p>Publisher: {{ game.publisher }}</p>
   </div>
   <div class="card-action">
-    <a href="{% url 'games_update' game.id %}">Edit</a>
+     <a href="{% url 'games_update' game.id %}">Edit</a>
     <a href="{% url 'games_delete' game.id %}">Delete</a>
   </div>
 </div>
-  <div class='col s6'>
-    
+<div class="col s6 m10">
+    <div class='card-action'>
+      <div class="card grey lighten-2 card-content"></div>
     <form action="{% url 'add_review' game.id %}" method="post">
       {% csrf_token %}
       {{ review_form.as_p }}
@@ -26,7 +33,10 @@
     <br>
       <table class="striped">
         <thead>
-          <tr><th>Date</th><th>Review</th><th>Rating</th></tr>
+          <tr><th>Date</th>
+            <th>Review</th>
+            <th>Rating</th>
+          </tr>
         </thead>
         <tbody>
           {% for review in game.review_set.all %}
@@ -35,17 +45,16 @@
               <td>{{ review.content }}</td>
               <td>{{ review.rating }}</td>
             </tr>
+          </div>
+  </div>
           {% endfor %}
         </tbody>
       </table>
-
+      </div>
     </form>
   </div>
-  
+</div>
   </div>
-<hr>
-
-
 <script>
   var dateEl = document.getElementById('id_date');
   M.Datepicker.init(dateEl, {
@@ -55,5 +64,4 @@
     autoClose: true
   });
 </script>
-
 {% endblock %}

@@ -1,13 +1,25 @@
 {% extends 'base.html' %}
-
+<div style="background-image: url('https://imgur.com/0kNwjca.jpg');"></div>
 {% block content %}
-  <h1>Delete Game</h1>
-
-  <h4>Are you sure you want to delete <span class="teal-text">{{ object.name }}</span>?</h4>
+<style>
+  body {
+    background-image: url('https://imgur.com/0kNwjca.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  </style>
+<div style="background-image: url('https://imgur.com/0kNwjca.jpg');"></div>
+  <h1 align="center">Delete Game?</h1>
+  <div class="card grey lighten-2">
+    <div class="card-content black-text">
+  <h4>Are you sure you want to delete <span class="black-text">{{ object.name }}</span>?</h4>
 
   <form action="" method="POST">
     {% csrf_token %}
-    <input type="submit" value="Yes - Delete!" class="btn">
+    <br><br>
+    <input type="submit" value="Yes - Delete!" class="btn" style="margin-left: 0%">
     <a href="{% url 'detail' game.id %}">Cancel</a>
   </form>
+  </div>
 {% endblock %}
