@@ -9,25 +9,20 @@
   }
   </style>
 <h1 align="center">Game Details</h1>
-
   <div class="col s6 m10">
     <div class="card grey darken-1 card-content white-text">
   <div class="card-content">
     <span class="card-title orange-text">{{ game.name }}</span>
- 
-    
             <p>Genre: {{ game.genre }}</p>
             <p>Description: {{ game.description }}</p>
             <p>Publisher: {{ game.publisher }}</p>
   </div>
   <div class="card-action">
-     <a href="{% url 'games_update' game.id %}">Edit</a> 
-    
+     <a href="{% url 'games_update' game.id %}">Edit</a>
     <a href="{% url 'games_delete' game.id %}">Delete</a>
   </div>
 </div>
 <div class="col s6 m10">
-  
     <div class='card-action'>
       <div class="card grey lighten-2 card-content"></div>
     <form action="{% url 'add_review' game.id %}" method="post">
@@ -36,7 +31,6 @@
       <input type="submit" class="btn" value="Add Review">
     </form>
     <br>
-    
       <table class="striped">
         <thead>
           <tr><th>Date</th>
@@ -61,7 +55,6 @@
   </div>
 </div>
   </div>
-
 <script>
   var dateEl = document.getElementById('id_date');
   M.Datepicker.init(dateEl, {
