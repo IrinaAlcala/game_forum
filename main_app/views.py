@@ -56,7 +56,7 @@ def home(request):
 
 @login_required
 def games_index(request):
-  games = Game.objects.filter(user=request.user)
+  games = Game.objects.all()
   return render(request, 'games/index.html', { 'games': games })
 
 @login_required
