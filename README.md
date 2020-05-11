@@ -34,6 +34,7 @@ This helps people who visit the site know which games to buy and which games to 
 
 - [Trello Board](https://trello.com/b/E6AG1fNT/gameforum)
 - [Visit our Website here](https://p3gameforum.herokuapp.com/)
+- [Pitch Deck](https://drive.google.com/file/d/1CMy4FwjALe2OIZZrf_6hGHU5oC6KzH5H/view?usp=sharing)
 
 ## Next Steps
 

@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'game_forum',
-        'USER' : 'postgres'
-    }
+    #     'USER' : 'postgres'
+     }
 }
 
 
@@ -124,9 +124,5 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/games/'
 
 LOGOUT_REDIRECT_URL = '/'
-<<<<<<< HEAD
-
-=======
->>>>>>> master
-import django_heroku
-django_heroku.settings(locals())
+# import django_heroku
+# django_heroku.settings(locals())
