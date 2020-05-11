@@ -124,9 +124,5 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/games/'
 
 LOGOUT_REDIRECT_URL = '/'
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 import django_heroku
 django_heroku.settings(locals())
