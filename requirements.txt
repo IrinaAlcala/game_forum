@@ -7,7 +7,7 @@ beautifulsoup4==4.8.0
 blinker==1.4
 boto3==1.13.0
 botocore==1.16.0
-bottle==0.12.17
+bottle==0.12.19
 bottle-websocket==0.2.9
 cached-property==1.5.1
 certifi==2019.6.16
