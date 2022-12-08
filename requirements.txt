@@ -10,7 +10,7 @@ botocore==1.16.0
 bottle==0.12.17
 bottle-websocket==0.2.9
 cached-property==1.5.1
-certifi==2019.6.16
+certifi==2022.12.7
 cffi==1.12.3
 chardet==3.0.4
 colorama==0.4.1
